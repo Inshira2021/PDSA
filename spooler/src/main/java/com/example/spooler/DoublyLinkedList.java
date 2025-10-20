@@ -13,19 +13,7 @@ public class DoublyLinkedList {
         removedJobIds = new LinkedList<>();
     }
 
-    public void addLast(int jobId, String documentName, String status) {
-        Node newNode = new Node(jobId, documentName, status);
-        if (head == null) {
-            head = newNode;
-        } else {
-            Node last = head;
-            while (last.next != null) {
-                last = last.next;
-            }
-            last.next = newNode;
-            newNode.prev = last;
-        }
-    }
+    
 
     public boolean removeJob(int jobId) {
         Node current = findJob(jobId);
